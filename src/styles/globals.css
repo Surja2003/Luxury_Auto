@@ -1,0 +1,150 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  cursor: none;
+}
+
+body {
+  background: #050505;
+  color: #F5F5F0;
+  font-family: 'Jost', sans-serif;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 4px;
+}
+body::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #C9A84C, #FFD700);
+  border-radius: 2px;
+}
+
+/* ── Ken Burns hero zoom ── */
+@keyframes kenBurns {
+  0%   { transform: scale(1.0); }
+  100% { transform: scale(1.12); }
+}
+
+/* ── Gold shimmer sweep ── */
+@keyframes shimmerSweep {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(400%); }
+}
+
+/* ── Infinite marquee ── */
+@keyframes marqueeScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── Gold pulse ring ── */
+@keyframes goldPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.6); }
+  70%  { box-shadow: 0 0 0 18px rgba(255, 215, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
+}
+
+/* ── Floating particle ── */
+@keyframes floatParticle {
+  0%   { transform: translateY(0px) rotate(0deg); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 0.6; }
+  100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+}
+
+/* ── Loader line sweep ── */
+@keyframes loaderLine {
+  0%   { width: 0%; }
+  100% { width: 100%; }
+}
+
+/* ── Loader fade out ── */
+@keyframes loaderFadeOut {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* ── Soft gold glow text ── */
+@keyframes textGlow {
+  0%, 100% { text-shadow: 0 0 20px rgba(201,168,76,0.3); }
+  50%       { text-shadow: 0 0 40px rgba(255,215,0,0.6), 0 0 80px rgba(201,168,76,0.2); }
+}
+
+/* ── Gradient border shimmer ── */
+@keyframes borderGlow {
+  0%, 100% { border-color: rgba(201,168,76,0.2); }
+  50%       { border-color: rgba(255,215,0,0.6); }
+}
+
+/* ── WhatsApp pulse ── */
+@keyframes whatsappPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+  70%  { box-shadow: 0 0 0 20px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+
+/* ── Cursor ring scale ── */
+@keyframes cursorRing {
+  0%   { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+  100% { transform: translate(-50%, -50%) scale(2.5); opacity: 0; }
+}
+
+/* ── Section shimmer divider ── */
+.gold-shimmer-line {
+  position: relative;
+  overflow: hidden;
+}
+.gold-shimmer-line::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 30%;
+  background: linear-gradient(90deg, transparent, rgba(255,215,0,0.4), transparent);
+  animation: shimmerSweep 3s ease-in-out infinite;
+}
+
+.font-playfair  { font-family: 'Playfair Display', serif; }
+.font-cormorant { font-family: 'Cormorant Garamond', serif; }
+.font-jost      { font-family: 'Jost', sans-serif; }
+.font-tajawal   { font-family: 'Tajawal', sans-serif; }
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #C9A84C 0%, #FFD700 50%, #C9A84C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 168, 76, 0.15);
+}
+
+.gold-border-glow {
+  animation: borderGlow 3s ease-in-out infinite;
+}
+
+.whatsapp-pulse {
+  animation: whatsappPulse 2s ease-out infinite;
+}
+
+.gold-pulse {
+  animation: goldPulse 2s ease-out infinite;
+}
+
+a { text-decoration: none; color: inherit; }
+
+@media (max-width: 768px) {
+  html { cursor: auto; }
+}
