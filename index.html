@@ -1,22 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Luxury Car Dealership Website</title>
-      <meta name="description" content="Showcases ultra-premium pre-owned luxury cars in the UAE with elegant design, seamless browsing, and instant WhatsApp inquiries for a high-end buying experience." />
-      <meta name="robots" content="noindex, nofollow" />
-      <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
-      
-    </head>
+    <!-- Primary SEO -->
+    <title>Panamera Motors | Luxury Pre-Owned Cars in Abu Dhabi, UAE</title>
+    <meta name="description" content="Panamera Motors is Abu Dhabi's premier destination for ultra-premium pre-owned luxury vehicles. Browse our exclusive collection of Rolls-Royce, Bentley, Lamborghini & more. Instant WhatsApp inquiries." />
+    <meta name="keywords" content="luxury cars UAE, pre-owned luxury cars Abu Dhabi, premium used cars UAE, Rolls-Royce Abu Dhabi, Bentley UAE, Lamborghini UAE, Panamera Motors, luxury car dealership UAE" />
+    <meta name="author" content="Panamera Motors" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#C9A84C" />
+    <link rel="canonical" href="https://panameramotor.ae/" />
 
-    <body>
-      
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-      
-    </body>
-  </html>
-  
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://panameramotor.ae/" />
+    <meta property="og:title" content="Panamera Motors | Luxury Pre-Owned Cars in Abu Dhabi, UAE" />
+    <meta property="og:description" content="Abu Dhabi's premier destination for ultra-premium pre-owned luxury vehicles. Browse Rolls-Royce, Bentley, Lamborghini & more. Instant WhatsApp inquiries." />
+    <meta property="og:image" content="https://panameramotor.ae/og-image.jpg" />
+    <meta property="og:locale" content="en_AE" />
+    <meta property="og:site_name" content="Panamera Motors" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Panamera Motors | Luxury Pre-Owned Cars in Abu Dhabi, UAE" />
+    <meta name="twitter:description" content="Abu Dhabi's premier destination for ultra-premium pre-owned luxury vehicles. Browse Rolls-Royce, Bentley, Lamborghini & more." />
+    <meta name="twitter:image" content="https://panameramotor.ae/og-image.jpg" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoDealer",
+      "name": "Panamera Motors",
+      "alternateName": "بانميرا موتورز",
+      "url": "https://panameramotor.ae/",
+      "description": "Abu Dhabi's premier destination for ultra-premium pre-owned luxury vehicles.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Abu Dhabi",
+        "addressCountry": "AE"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday"],
+          "opens": "09:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Friday",
+          "opens": "14:00",
+          "closes": "21:00"
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "telephone": "+971501234567",
+        "availableLanguage": ["English","Arabic"]
+      },
+      "sameAs": [
+        "https://instagram.com/panameramotor",
+        "https://tiktok.com/@panameramotor"
+      ]
+    }
+    </script>
+
+    <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
